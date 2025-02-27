@@ -6,7 +6,8 @@ const port = 8090;
 
 app.use(express.json()); // Middleware to parse JSON request body
 
-const GEO_API_KEY = "<API key from ipgeolocation.io>";
+const GEO_API_KEY = process.env.GEO_API_KEY;
+
 //const ALLOWED_COUNTRY_CODE = "LK"; // Hard coded for now
 
 app.post("/risk", async (req, res) => {
